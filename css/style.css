@@ -1,0 +1,73 @@
+html, body {
+    height:100%;
+} 
+#wrapper{
+	height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+	background-image: url('https://i.imgur.com/ZYlJByP.gif');
+    background-repeat: no-repeat;
+    padding-top: 50px;
+}
+.accordion-content{
+	background:rgba(34,34,34,0.75);
+	padding: 20px;
+	max-height: 500px;
+	overflow-y: scroll;
+}
+.form-heading{
+	color: #fff;
+}
+.user-list{
+	padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: #F7F7F7;
+    border-radius: 5px;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    cursor: pointer;
+    margin-top: 2px;
+}
+.user-list:hover{
+    background-color: #939393;
+}
+.active{
+	background-color: #007bff;
+}
+
+.user-list img{
+	height: 32px;
+	width: 32px;
+}
+.ui-widget-content {
+    border: 0!important;
+}
+.col-md-5 .user-list h5{
+	display: inline;
+    margin-left: 10px;
+}
+.user-list-container{
+	overflow-y:scroll;
+	max-height: 400px;
+}
+.accordion-content button.next{
+	float: right;
+	margin-top: 10px;
+}
+.accordion-content button.prev{
+	float: left;
+	margin-top: 10px;
+}
+#second,#third,#fourth,#fifth,#sixth{
+	display: none;
+}
+#third,#fourth{
+	max-width: 400px;
+	margin: 0px auto;
+}
+#calendar {
+		max-width: 900px;
+		margin: 0 auto;
+		background-color: #fff;
+	}
+
