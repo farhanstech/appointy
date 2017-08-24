@@ -70,8 +70,11 @@ html, body {
 		margin: 0 auto;
 		background-color: #fff;
 	}
+
 #second{
 	max-height: 450px;
 	overflow-y: scroll;
 }
-
+#myModal td{
+	cursor: pointer;
+}
