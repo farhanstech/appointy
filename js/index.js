@@ -28,6 +28,15 @@ $(document).ready(function(){
     var agentSelected='';
     var dateSelected;
     var timeSelected;
+
+    $('#myModal td').click(function(){
+    	timeSelected = $(this).text();
+    	$('#myModal').modal('hide');
+    	$('#second').hide();
+		$('#third').show();
+
+    });
+
     function setTitle()
     {
 
@@ -196,12 +205,12 @@ $(document).ready(function(){
 			navLinks: true, // can click day/week names to navigate views
 			selectable: true,
 			selectHelper: true,
-			select: function(start, end) {
+			select: function(start, end, jsEvent, view) {
 
 				var check = start.format("YYYY-MM-DD");
 				var today = moment().format("YYYY-MM-DD");
 
-			    if(check < today)
+				if(check < today)
 			    {
 			        alert("Unavailable");
 			    }
@@ -210,8 +219,12 @@ $(document).ready(function(){
 			        dateObj = start;
 					dateSelected = start.format("DD-MM-YYYY");
 					timeSelected = start.format("HH:mm");
+					if(view.name == 'month')
+				    	$('#myModal').modal('show');
+				    else{
 					$('#second').hide();
 					$('#third').show();
+					}
 			    }
 
 				
